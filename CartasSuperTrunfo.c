@@ -9,7 +9,9 @@ int main(){
     int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
-    int pontos_turisticos1, pontos_turisticos2;
+    int ptur1, ptur2;
+    float denpop1, denpop2;
+    float pibpc1, pibpc2;
 
 // SOLICITA AO USUÁRIO A ATRIBUIÇÃO DE VALOR ÀS VARIÁVEIS PARA CARTA 1
     printf("Digite o estado da cidade da Carta 1: ");
@@ -31,7 +33,7 @@ int main(){
     scanf("%f", &pib1);
 
     printf("Digite o número de pontos turísticos da cidade da Carta 1: ");
-    scanf("%d", &pontos_turisticos1);
+    scanf("%d", &ptur1);
 
 // SOLICITA AO USUÁRIO A ATRIBUIÇÃO DE VALOR ÀS VARIÁVEIS PARA CARTA 2
     printf("Digite o estado da cidade da Carta 2: ");
@@ -53,7 +55,13 @@ int main(){
     scanf("%f", &pib2);
 
     printf("Digite o número de pontos turísticos da cidade da Carta 2: ");
-    scanf("%d", &pontos_turisticos2);
+    scanf("%d", &ptur2);
+
+// CALCULA A DENSIDADE POPULACIONAL E O PIB PER CAPITA DAS CIDADES
+    denpop1 = (float) populacao1 / area1;
+    denpop2 = (float) populacao2 / area2;
+    pibpc1 = (float) pib1 / populacao1;
+    pibpc2 = (float) pib2 / populacao2;
 
 // IMPRIME OS DADOS DA CARTA 1
     printf("Carta 1\n");
@@ -63,7 +71,9 @@ int main(){
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
-    printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1);
+    printf("Número de Pontos Turísticos: %d\n", ptur1);
+    printf("Densidade Populacional: %.2f hab/km²\n", denpop1);
+    printf("PIB per Capita: %.2f reais\n", pibpc1);
 
 // IMPRIME OS DADOS DA CARTA 2
     printf("Carta 2\n");
@@ -73,7 +83,9 @@ int main(){
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2);
+    printf("Número de Pontos Turísticos: %d\n", ptur2);
+    printf("Densidade Populacional: %.2f hab/km²\n", denpop2);
+    printf("PIB per Capita: %.2f reais\n", pibpc2);
 
     return 0;
 
